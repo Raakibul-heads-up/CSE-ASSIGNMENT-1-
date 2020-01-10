@@ -12,13 +12,12 @@ typedef struct
 
 } student;
 
-
 int highest_number(student s[],int n){
     int  high;
-    int i,s_id;
+    int i ,s_id;
 
     high = s[0].total;
-    s_id = 0;
+    s_id=0;
 
     for(i = 1; i < n; i++)
     {
@@ -26,20 +25,23 @@ int highest_number(student s[],int n){
         if (high < s[i].total)
 
             high = s[i].total;
-            s_id = i;
+            s_id = s[i].id;
 
     }
 
-     return s_id;
     return high;
+    return s_id;
 
 
 }
+
+
+
 int main()
 {
 
     int n,i;
-    printf("How many movie star information do you want :");
+    printf("How many student information do you want :");
     scanf("%d",&n);
 
     student s[n];
